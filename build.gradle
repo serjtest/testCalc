@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group 'checkCalc'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+sourceSets {
+    main.java.srcDir "src/main/java"
+    main.resources.srcDir "src/main/resources"
+    test.java.srcDir "src/test/java"
+    test.resources.srcDir "src/test/resources"
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven { url "http://repo.spring.io/libs-snapshot" }
+}
+
+dependencies {
+    compile 'org.apache.httpcomponents:httpclient:4.5.6'
+    
+    testCompile group: 'com.tngtech.java', name: 'junit-dataprovider', version: '1.10.0'
+    testCompile group: 'org.hsqldb', name: 'hsqldb'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
