@@ -22,8 +22,11 @@ repositories {
 
 dependencies {
     compile 'org.apache.httpcomponents:httpclient:4.5.6'
+    compile group: 'com.google.code.gson', name: 'gson', version: '2.7'
+    compile group: 'org.codehaus.jackson', name: 'jackson-mapper-asl', version: '1.9.13'
     
     testCompile group: 'com.tngtech.java', name: 'junit-dataprovider', version: '1.10.0'
     testCompile group: 'org.hsqldb', name: 'hsqldb'
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    
 }
