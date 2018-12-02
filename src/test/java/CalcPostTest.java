@@ -34,9 +34,14 @@ public class CalcPostTest {
         // @formatter:off
         return new Object[][] {
                 { OperationType.sum(), 4, 2, (float) 6 },
-                { OperationType.subtraction(), 4, 2, (float)  2 },
+                { OperationType.sum(),100, 100, (float) 200 },
+                { OperationType.subtraction(), 4, 2, (float) 2 },
+                { OperationType.subtraction(), 1, 2, (float) -1 },
                 { OperationType.multiply(), 4, 2, (float) 8 },
+                { OperationType.multiply(), 100, 100, (float) 10000 },
+                { OperationType.multiply(), 100, 0, (float) 0 },
                 { OperationType.division(), 4, 2, (float) 2 },
+                { OperationType.division(), 10, 330, (float) 0.030303030303030304 },
                 /* ... */
         };
         // @formatter:on
